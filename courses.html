@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans'
+          rel='stylesheet'>
+    <title>Course Work</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="css/portfolio.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="dropbtn2" onclick="listProjs()">Projects</a>
+                        <div class="dropdown-content" id="myDropdown2">
+                            <a href="projects/rocketry.html">Waterloo Rocketry</a>
+                            <a href="/construction.html">EdgeRunners - Capstone</a>
+                            <a href="/construction.html">CubeSat Propulsion</a>
+                            <a href="/construction.html">Personal Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="header-button" href="/courses.html">Course Work</a>
+                    </li>
+                    <li>
+                        <a class="header-button" href="/construction.html">Co-op Experiences</a>
+                    </li>
+                    <li>
+                        <a class="dropbtn" onclick="listDocs()">Documents</a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="documents/Resume.pdf">Resume</a>
+                            <a href="documents/Portfolio.pdf">Portfolio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <!--TODO: I really want controls but I'm unsure if I can justify it, no projects-->
+        <div class="row proj-content" style="margin-top: 15px;">
+            <div>
+                <img class="proj-img" src="images/courses/me567.jpg">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">ME567: Fire Safety Engineering</h3>
+                <!--TODO: Do I want codes?-->
+                <p>
+                    In Fire Safety Engineering we discussed the physics behind ignition and fire behaviour in residential scenarios. As a final project in this course,
+                    I wrote a literature review on lithium-ion batteries, their use in electric vehicles, and how to improve safety features in these batteries.
+                    The following is an excerpt from the paper's abstract, and the entire paper can be found <a href="documents/LithiumIonBatteryReview.pdf">here.</a>
+                    <br>
+                    "As the use of electric and hybrid vehicles increases, so do incidents resulting in them catching fire. This report aims to review how the (lithium-ion) battery
+                    packs are protected in a vehicle crash, and current research into the prevention and suppression of lithium-ion batterie fires."
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div class="left-text">
+                <h3 class="proj-header">ME561: Fluid Power Control Systems</h3>
+                <p>
+                    Fluid Power Control systems covers the properties of hydraulic fluids, the charcteristics of componments found in fluids power circuits, such as valves
+                    and regulators, as wellas the design of hydraulic and pnewmatic cricuits. The labs in this course involved designing and assembling different fluid power
+                    circuits, inlcuding sequencing pneumatic actuated cylinders using pressure operated solenoid valves, as can be seen in the video.
+                    <br>
+                    The second half of the course covers how to control fluid power circuits using programmable logic controllers (PLCs), and how to construct state diagrams
+                    and program the PLC using a ladder diagrams.
+                </p>
+            </div>
+            <div>
+                <video muted controls class="proj-video">
+                    <source src="images/courses/me561.mp4">
+                </div>
+            </div>
+            <hr>
+            <div class="row proj-content">
+                <div>
+                    <img class="proj-img" src="images/courses/me548.jpg">
+                </div>
+                <div class="right-text">
+                    <h3 class="proj-header">ME548: Numerical Control of Machine Tools</h3>
+                    <p>
+                        <!--TODO: Add a line maybe?-->
+                        Numerical Control of Machine Tools covers all things related to CNC machining. The first half of the course covered writing and interpreting G-code and programing CNC
+                        machines. The aluminum shield pictured was designed and programmed in MasterCam, and the tolerances of the machining were checked using a coordinate-measuring machine (CMM).
+                        <br>
+                        The second half of the course covered the forces involved in different machining operations. As part of the course I coded a force calculator for milling operations in python.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row proj-content">
+                <div class="left-text">
+                    <h3 class="proj-header">MTE322: Electromechanical Machine Design</h3>
+                    <p>
+                        Electromechanical Machine Design is an introduction to mechanical design. The course covers integreated design of motion transmission systems, inlcuidng the following
+                        components: gears, couplers, bearings, powerscrews, fastener, motors, actuators. The final project of the course was to design the shaft for a washing machine. This
+                        project included doing force analysis to minimize the radius of the shaft, as well as sourcing appropriate seals and bearings for the requirements of the system.
+                        Additionally drawings and assembly instructions of the design had to be made to ensure that the system was physically able to be manufacted.
+                    </p>
+                </div>
+                <div>
+                    <img class="proj-img" src="images/courses/mte322.png">
+                </div>
+            </div>
+            <hr>
+            <div class="row proj-content">
+                <div>
+                    <video muted controls class="proj-video">
+                        <source src="images/courses/mte380.mp4">
+                    </div>
+                    <div class="right-text">
+                        <h3 class="proj-header">MTE380: Mechatronics Engineering Design Workshop</h3>
+                        <p>
+                            Every year the studens Mechatronics Engineering students in their 3rd year are given a task they must design and build a robot to accomplish. In my year the task
+                            was to create a line following robot which could then pick up and move a lego man to a designated safe space. My role on the team was to do the mechanical subsystem.
+                            This included speccing out the motors, doing the CAD for the chassis and 3D printing it, as well as managing the integration of the electrical system. This process was
+                            iterated to find a final design as one of the criteria for the robot was to make it as light and fast as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Matthew Gencher 2023</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /.container -->
+            <script src="js/jquery-1.10.2.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/functions.js"></script>
+        </body>

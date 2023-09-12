@@ -1,6 +1,182 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <p><a href="MatthewGencherPortfolio.pdf">Matthew Gencher Portfolio</a>.</p>
-  </body>
-</html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href='https://fonts.googleapis.com/css?family=Open Sans'
+              rel='stylesheet'>
+        <title>Matthew Gencher - Home</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom CSS for the '3 Col Portfolio' Template -->
+        <link href="css/portfolio.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button"
+                            class="navbar-toggle"
+                            data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Home</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="dropbtn2" onclick="listProjs()">Projects</a>
+                            <div class="dropdown-content" id="myDropdown2">
+                                <a href="projects/rocketry.html">Waterloo Rocketry</a>
+                                <a href="construction.html">EdgeRunners - Capstone</a>
+                                <a href="construction.html">CubeSat Propulsion</a>
+                                <a href="construction.html">Personal Projects</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="header-button" href="/courses.html">Course Work</a>
+                        </li>
+                        <li>
+                            <a class="header-button" href="construction.html">Co-op Experiences</a>
+                        </li>
+                        <li>
+                            <a class="dropbtn" onclick="listDocs()">Documents</a>
+                            <div class="dropdown-content" id="myDropdown">
+                                <a href="documents/Resume.pdf">Resume</a>
+                                <a href="documents/Portfolio.pdf">Portfolio</a>
+                            </div>
+                        </li>
+                    </ul>
+                    </divd><!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <div class="container">
+                <div class="row about-me">
+                    <!--About me text-->
+                    <p style="text-align:center; font-size:30px">Matthew Gencher</p>
+                    <!--TODO: Maybe include degree somewhere-->
+                    <p>
+                        On this site you can find a collection of engineering projects I have worked on through course work, design teams, extracurriculars and past co-ops.
+                    </p>
+                    <!--TODO: Add this style-->
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Projects</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="projects/rocketry.html">
+                            <img class="img-responsive" src="images/home/rocketrytable.jpg">
+                        </a>
+                        <h3>
+                            <a href="projects/rocketry.html">Waterloo Rocketry</a>
+                        </h3>
+                        <p>
+                            Waterloo Rocketry designs and manufacures hybrid and liquid rockets with a target apogee of 30,000ft.
+                            On the team I worked on multiple propulsion and electrical projects.
+                        </p>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="construction.html">
+                            <img style="height: 270px"
+                                 class="img-responsive"
+                                 src="images/home/FinalRenderCollapsed.png">
+                        </a> <!--TODO: Make this style better-->
+                        <h3>
+                            <a href="construction.html">EdgeRunners - Capstone</a>
+                        </h3>
+                        <p>
+                            A hockey skate's shape (or profile) is an important factor in the performance of the athlete.
+                            The goal of EdgeRunners was to create a device that could accurately and consistently measure a skates profile.
+                        </p>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="construction.html">
+                            <img style="height: 270px"
+                                 class="img-responsive"
+                                 src="images/home/printedcc.png">
+                        </a>
+                        <h3>
+                            <a href="construction.html">CubeSat Propulsion - Columbiad</a>
+                        </h3>
+                        <p>
+                            At Columbiad Launch Services we explored the use of using nano-thermites for inspace propulsion of satellites.
+                            I designed the combustion chamber as well as investiagted ignition methods for the fuel.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="construction.html">
+                            <img class="img-responsive" src="images/home/helicopter.jpg">
+                        </a>
+                        <h3>
+                            <a href="construction.html">Co-op Experience</a>
+                        </h3>
+                        <!--TODO: I hate the titles of these-->
+                        <p>
+                            Through the co-op program at the Univeristy of Waterloo, I had the chance to have multiple different co-op experiences.
+                            In these co-ops I learned many different skills involving software developement, mechanical design and analysis, and quality assurance and testing.
+                        </p>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="construction.html">
+                            <img style="height: 270px"
+                                 class="img-responsive"
+                                 src="images/home/washingmachine.png">
+                        </a> <!--TODO: Maybe a better image-->
+                        <h3>
+                            <a href="construction.html">Relevant Coursework</a>
+                        </h3>
+                        <p>
+                            In Mechatronics Engineering I had the chance to develop different skills in the multiple labs on campus. These skills include pneumatic and hydraulic system design, CNC machining and more.
+                            I also worked on multiple different projects for different courses.
+                        </p>
+                        <!--TODO: Reword-->
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="construction.html">
+                            <img style="height: 270px"
+                                 class="img-responsive"
+                                 src="images/home/stlyophone3.jpg">
+                        </a> <!--TODO: This image fucking sucks-->
+                        <h3>
+                            <a href="construction.html">Personal Projects</a>
+                        </h3>
+                        <p>
+                            In addition to work I did in class and on co-op, I worked on a number of personal projects. Through these projects I developed my CAD skills by
+                            designing 3D printed parts, as well as electrical design by creating schematics and laying out PCBs.
+                        </p>
+                        <!--TODO: Reword this second sentence-->
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+            <div class="container">
+                <hr>
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Matthew Gencher 2023</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /.container -->
+            <script src="js/jquery-1.10.2.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/functions.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans'
+          rel='stylesheet'>
+    <title>Waterloo Rocketry</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="../css/portfolio.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="dropbtn2" onclick="listProjs()">Projects</a>
+                        <div class="dropdown-content" id="myDropdown2">
+                            <a href="rocketry.html">Waterloo Rocketry</a>
+                            <a href="../construction.html">EdgeRunners - Capstone</a>
+                            <a href="../construction.html">CubeSat Propulsion</a>
+                            <a href="../construction.html">Personal Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../courses.html">Course Work</a>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../construction.html">Co-op Experiences</a>
+                    </li>
+                    <li>
+                        <a class="dropbtn" onclick="listDocs()">Documents</a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="../documents/Resume.pdf">Resume</a>
+                            <a href="../documents/Portfolio.pdf">Portfolio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <!--TODO: I really want controls but I'm unsure if I can justify it, no projects-->
+        <img class="header-img" src="../images/proj-imgs/rocketryLogo.png">
+        <p>
+            The Waterloo Rocketry team designs, manufactures and tests a hybrid rocket each year for launch at the Spaceport America Cup and Launch Canada competitions.
+            Through my 5 years on the team, I had a chance to work on three seperate rockets, Shark of the Sky, Kraken of the Sky and Leviathan of the sky. These rockets placed
+            top 3 in the hybrid 30,000ft category each year at Spaceport America.
+        </p>
+        <div class="left-text proj-content">
+            <div class="left-text" style="width: 70%;">
+                <p>The 2023 rocket, Leviathn of the sky, had the following specifications:</p>
+                <ul>
+                    <li>Dry Mass: 83.9 lbs (38 kg)</li>
+                    <li>Wet Mass: 126.8 lbs (57.5 kg)</li>
+                    <li>Specific Impulse: 216s</li>
+                    <li>Apogee: 31,476 ft</li>
+                    <li>Thrust: 2350 lbf (10.5kN)</li>
+                    <li>Propellants: Nitrous Oxide (N2O) & Hydroxyl-Terminated Polybutadiene (HTPB)</li>
+                </ul>
+            </div>
+            <div>
+                <iframe width="320"
+                        height="180"
+                        src="https://www.youtube.com/embed/_xNaNCqM2Go"
+                        title="Leviathan of the Sky - SAC 2023 Launch"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/fast.jpg">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">FAST (Injector Valve) - 2022</h3>
+                <p>
+                    FAST stands for Fast Actuation Solenoid Nitrous Transfer. The goal of this project was to reduce the weight of the injector valve of the rocket,
+                    as well as to decrease the time it takes to reach maximum flow rate of nitrous oxide. The previous injector valve used a heavy motor to open a mechanical valve.
+                    FAST instead uses a solenoid valve to allow a pneumatic cylinder to turn a ball valve. This project required calculating the air pressure required,
+                    the volume of air needed, as well as the length of the arm to provide enough torque to open the valve. This upgrade saved approximately 3.5lbs,
+                    on a rocket weighing 85lbs dry, which is a 4% weight savings.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div class="left-text">
+                <h3 class="proj-header">Recovery Drop Test - 2021</h3>
+                <p>
+                    Due to airspace regulations in Canada, the team is unable to test launch our rocket before competition. In part of the testing of the various systems of the rocket
+                    we aimed to test and validate our reefing parachute design. In order to accomplish this we partnered with a local helicopter company to conduct a drop test of the
+                    recovery system. For this test multiple modifications to the electrical system had to be made. The remote arming circuit board and code needed to be modified so the system was only armed directly before deployment and so the board could communicate its state
+                    to ensure the operators of the test were safe at all times. These changes were tested using a vacuum chamber to simulate changes in altitude.
+                </p>
+                <!--TODO: Do I want to mention something about how theres litearally black powder on board.-->
+            </div>
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/dropTest.jpg">
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/schematic.png">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">Actuator Board - 2020</h3>
+                <p>
+                    Another project I led was the design of the actuator circuit board. Originally meant for use with the injector valve,
+                    this board is now used in multiple parts of the rocket including the injector valve, vent valve, and fill disconnect.
+                    Using a PIC microcontroller as the brains, the board is connected to RocketCAN, the CAN Bus which interconnects the entire rocket,
+                    and tells the associated valve, or actuator, when to actuate by powering a transistor.
+                    Additionally, the board accommodates voltage sensing in order to track the associated batteries for the valves,
+                    as well as two limit switches so the valve position is known. This board was designed using KiCAD, printed by a third party, then populated by the team.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div class="left-text">
+                <h3 class="proj-header">Oxidizer Tank Stand - 2019</h3>
+                <p>
+                    Part of the testing procedure for the rocket is to conduct static fires to validate and get a thrust profile of the engine.
+                    To run these tests, the proper infrastructure is required. I designed a tank stand to hold the oxidizer tank vertically during these tests.
+                    The stand had to be tall enough to accommodate the 6ft tank as while as required plumbing, strong enough to support the 100lb tank,
+                    and stable enough withstand winds up to 50km/h winds due to testing occurring outdoors. The stand was designed in SolidWorks,
+                    including FEA (finite element analysis) being done to ensure that the required factors of safety were met.
+                </p>
+            </div>
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/mattiTankStand.jpg">
+            </div>
+        </div>
+        <!--TODO: Embed a hotfire and launch video side by side, maybe give it the title "Gallery"-->
+        <div class="container">
+            <hr>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Matthew Gencher 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+        <script src="../js/jquery-1.10.2.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/functions.js"></script>
+    </body>
