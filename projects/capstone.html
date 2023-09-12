@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans'
+          rel='stylesheet'>
+    <title>EdgeRunner</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="../css/portfolio.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="dropbtn2" onclick="listProjs()">Projects</a>
+                        <div class="dropdown-content" id="myDropdown2">
+                            <a href="rocketry.html">Waterloo Rocketry</a>
+                            <a href="capstone.html">EdgeRunners - Capstone</a>
+                            <a href="../construction.html">CubeSat Propulsion</a>
+                            <a href="../construction.html">Personal Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../courses.html">Course Work</a>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../construction.html">Co-op Experiences</a>
+                    </li>
+                    <li>
+                        <a class="dropbtn" onclick="listDocs()">Documents</a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="../documents/Resume.pdf">Resume</a>
+                            <a href="../documents/Portfolio.pdf">Portfolio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <img class="header-img" src="../images/proj-imgs/capstonelogo.png">
+        <div class="left-text proj-content">
+            <div class="left-text" style="width: 70%;">
+                <p>At the culmination of my degree, we were tasked with a fourth-year design, or capstone, project. The intention of the project is to identify a problem 
+                    and create a mechatronic system to solve it. The problem my group chose to solve is that the tools used to measure the profile of a hockey skate are analog, and the results are prone to human interpretation. 
+                    We aimed to create an automated digital solution that could measure and characterize a skate blade. My role on this project was to design the electrical
+                    system, as well as to write the code for communication between the measurement device and the user's computer.</p>
+            </div>
+            <div>
+                <iframe 
+                    width="320" 
+                    height="180" 
+                    src="https://www.youtube.com/embed/E0JdYR8jASs" 
+                    title="EdgeRunners - Capstone" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="row proj-content">
+            <div>
+                <img class="proj-img" src="../images/home/FinalRenderCollapsed.png">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">Final Design</h3>
+                <p>
+                    The theory of operation of the device is to use a Keyence IL-300, a laser distance sensor, to scan the bottom of a skate blade and determine its profile. 
+                    The skate is mounted above the sensor with a magnetic clamp. The sensor then moves along linear bearings to scan the length of the blade. 
+                    These distance measurements are collected and sent to the user's device over Bluetooth to be handled by software on the client's device. The software is
+                    written in JavaScript, filters the received data, and calculates the profile of the blade. The profile is then presented on a web page for the client to
+                    see the profile and identify any abnormalities in the blade.
+                </p>
+            </div>
+        </div>
+
+        <div class="row proj-content">
+            <div class="left-text">
+                <h3 class="proj-header">Electrical Subsystem</h3>
+                <p>
+                    The electrical system is based on an ESP32, which comes. packaged on a Feather breakout board. A custom PCB was designed for the feather to sit on, which 
+                    contains circuitry for an h-bridge motor controller, limit switches, as well as an analog input for our sensor. The microcontroller controller and digital logic
+                    operate on a 3.3V line, which is regulated from a 5V USB connection. The stepper motor which drives the belt to move the sensor has its own 7.5V power supply. 
+                    The schematic and PCB layout were designed in KiCAD.
+                </p>
+
+            </div>
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/fydpboard1.png">
+            </div>
+        </div>
+        <div class="row proj-content">
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/capstoneGroup.jpg">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">Bluetooth Firmware</h3>
+                <p>
+                    To communicate between the board and the user's computer the BLE (Bluetooth Low Energy) protocol was used. The ESP32 acts as a Bluetooth server;  
+                    written in C++ using the Arduino built-in BLE library. The user's computer acted as the Bluetooth server with the code being written in 
+                    JavaScript to allow our web app to receive the data. The server keeps a queue of all data points and sends the server the next one when an acknowledgement
+                    is received. This allows us to ensure that no data points are dropped, even if there is a brief disconnect.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <h3 class="gallery">Gallery</h3> <!--TODO: The formatting on this one needs to be different-->
+                <div class="proj-content enlarge">
+                    <img id="fydp1" class="gallery-img" src="../images/proj-imgs/clamps.jpg">
+                    <img id="fydp2" class="gallery-img" src="../images/proj-imgs/poster.jpg"> <!--TODO: Make this image higher quality somehow-->
+                    <img id= "fydp3" class="gallery-img" src="../images/proj-imgs/motorDrive.jpg">
+                </div>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close">X</span>
+                
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+        <div class="container">
+            <hr>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Matthew Gencher 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+        <script src="../js/jquery-1.10.2.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/functions.js"></script>
+    </body>
