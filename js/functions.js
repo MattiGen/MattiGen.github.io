@@ -60,3 +60,4 @@ span.onclick = function() {
 }
 
 //TODO: Clean this code, allow me to cycle through left and right
+//TODO: Make escape close image

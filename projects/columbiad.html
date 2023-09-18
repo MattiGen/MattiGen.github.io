@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans'
+          rel='stylesheet'>
+    <title>CubeSat Propulsion</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="../css/portfolio.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="dropbtn2" onclick="listProjs()">Projects</a>
+                        <div class="dropdown-content" id="myDropdown2">
+                            <a href="rocketry.html">Waterloo Rocketry</a>
+                            <a href="capstone.html">EdgeRunners - Capstone</a>
+                            <a href="../construction.html">CubeSat Propulsion</a>
+                            <a href="../construction.html">Personal Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../courses.html">Course Work</a>
+                    </li>
+                    <li>
+                        <a class="header-button" href="../construction.html">Co-op Experiences</a>
+                    </li>
+                    <li>
+                        <a class="dropbtn" onclick="listDocs()">Documents</a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="../documents/Resume.pdf">Resume</a>
+                            <a href="../documents/Portfolio.pdf">Portfolio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <img class="header-img" src="../images/proj-imgs/columbiadLogo.png">
+        <p>
+            Columbiad Launch Services is a small aerospace company based in Kitchener Ontario. Their focus is researching and developing a nano-thermite rocket fuel system 
+            for in-space propulsion. The proposed advantages of this type of fuel is combining the high energy density of solid fuels while allowing scalability and control
+            similar to a liquid engine. While I was at Columbiad I worked on the design of a 3D printed combustion chamber, the design of a pressurant tank as a method of feeding 
+            the fuel into the combustion chamber, and conducted research into different ignition methods of the fuel.
+        </p>
+        <hr>
+        <div class="row proj-content">
+            <div>
+                <img class="proj-img" src="../images/home/printedcc.png">
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">3D Printed Combustion Chamber</h3>
+                <p> <!--TODO: Fix wording of the first sentence-->
+                    My main focus was the design of the combustion chamber and integrated nozzle. This component was 3D printed out of an Inconel alloy, 
+                    with help from <a href="https://msam.uwaterloo.ca/">MSAM at the University of Waterloo.</a> The part was designed in SolidWorks and analysis was done with
+                    SolidWorks FEA and in Ansys. This analysis were done to ensure that the part could withstand the pressures and temperatures generated from combustion.
+                    Additionally, due to the nature of 3D printing, I had to ensure that the design would be geometrically possible to print.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div class="left-text">
+                <h3 class="proj-header">Pressurant Tank Design</h3>
+                <p>
+                    In order to feed the fuel into the combustion chamber, we explored using nitrogen as a pressurant to force flow from the nano-thermites. This was chosen as it
+                    allowed us to control the flow rate using variable pressure regulators. My role on this project was to determine the sizing of the pressurant tank. To do this 
+                    I implemented the following <a href="https://www.valispace.com/how-to-calculate-mission-specified-propulsion-system-parameters-part-iii/">equation</a>
+                    in a MatLab script to determine the required mass of nitrogen as we changed desired parameters for the engine.
+                    $$m_{0} =  \frac{P_{u}V_{Prop}}{RT_{0}}(\frac{\gamma }{1-P_{Pres}/P_{0}})$$
+                    In addition to sizing the tank, I drew a P&ID for the entire system.
+                </p>
+            </div>
+            <div>
+                <img class="proj-img" src="../images/proj-imgs/pid.png">
+            </div>
+        </div>
+        <hr>
+        <div class="row proj-content">
+            <div>
+                <a href="https://www.nature.com/articles/nphoton.2008.161"><img class="proj-img" src="../images/proj-imgs/laserignition.jpg" ></a>
+            </div>
+            <div class="right-text">
+                <h3 class="proj-header">Ignition Research</h3>
+                <p> 
+                    An interesting problem we had to tackle with this novel fuel was how to effectively ignite it. Part of my role at Columbiad was to research the viability of
+                    different ignition methods. Some of the methods I explored were using traditional spark plugs, using plasma spark plugs, and using a laser. I found research 
+                    that supported the energy produced by commercially available lasers would be sufficient to ignite the nano-thermites. This conclusion was validated when we 
+                    conducted similar experiments with our fuel. With that research as a starting point, I started to design a way to integrate a laser into the system to allow it 
+                    to work with our combustion chamber.
+                </p>
+            </div>
+        </div>
+        <hr>   
+    </div>
+
+        <div class="container">
+            <hr>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Matthew Gencher 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+        <script src="../js/jquery-1.10.2.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    </body>
