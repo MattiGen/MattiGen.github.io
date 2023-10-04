@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <link href='https://fonts.googleapis.com/css?family=Open Sans'
           rel='stylesheet'>
-    <title>CubeSat Propulsion</title>
+    <title>Personal Projects</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <!-- Custom CSS for the '3 Col Portfolio' Template -->
@@ -60,62 +60,77 @@
         <!-- /.container -->
     </nav>
     <div class="container">
-        <img class="header-img" src="../images/proj-imgs/columbiadLogo.png">
         <p>
-            Columbiad Launch Services is a small aerospace company based in Kitchener Ontario. Their focus is researching and developing a nano-thermite rocket fuel system 
-            for in-space propulsion. The proposed advantages of this type of fuel is combining the high energy density of solid fuels while allowing scalability and control
-            similar to a liquid engine. While I was at Columbiad I worked on the design of a 3D printed combustion chamber, the design of a pressurant tank as a method of feeding 
-            the fuel into the combustion chamber, and conducted research into different ignition methods of the fuel.
+            In addition to the projects I worked on in my courses and through my co-ops, I took on multiple personal projects. Through these I had the chance to experiment with 
+            the different engineering skills I had learned and my 3D printer, as well to solve simple problems I faced in my day to day life.
         </p>
         <hr>
         <div class="row proj-content">
             <div>
-                <img class="proj-img" src="../images/home/printedcc.png">
+                <img class="proj-img" src="../images/home/stlyophone3.jpg">
             </div>
             <div class="right-text">
-                <h3 class="proj-header">3D Printed Combustion Chamber</h3>
-                <p> <!--TODO: Fix wording of the first sentence-->
-                    My main focus was the design of the combustion chamber and integrated nozzle. This component was 3D printed out of an Inconel alloy, 
-                    with help from <a href="https://msam.uwaterloo.ca/">MSAM at the University of Waterloo.</a> The part was designed in SolidWorks and analysis was done with
-                    SolidWorks FEA and in Ansys. This analysis were done to ensure that the part could withstand the pressures and temperatures generated from combustion.
-                    Additionally, due to the nature of 3D printing, I had to ensure that the design would be geometrically possible to print.
+                <h3 class="proj-header">Stylophone</h3>
+                <p> 
+                    A stylophone is an analog electrical instrument played with a stylus. Due to my passion for music, and the simplicity of the instrument I undertook a project to 
+                    make one. It is based off a 555 timer, which when different resistance values are used, caused by touching a different a different key, a different note is produced.
+                    In addition to the different notes, I implemented a volume control, a tuning potentiometer, a vibrato switch, and a power switch. I 3D printed a case to snugly 
+                    hold all the different components of the device. 
                 </p>
             </div>
         </div>
         <hr>
         <div class="row proj-content">
             <div class="left-text">
-                <h3 class="proj-header">Pressurant Tank Design</h3>
+                <h3 class="proj-header">Automatic Guitar Tuner</h3>
                 <p>
-                    In order to feed the fuel into the combustion chamber, we explored using nitrogen as a pressurant to force flow from the nano-thermites. This was chosen as it
-                    allowed us to control the flow rate using variable pressure regulators. My role on this project was to determine the sizing of the pressurant tank. To do this 
-                    I implemented the following <a href="https://www.valispace.com/how-to-calculate-mission-specified-propulsion-system-parameters-part-iii/">equation</a>
-                    in a MatLab script to determine the required mass of nitrogen as we changed desired parameters for the engine.
-                    $$m_{0} =  \frac{P_{u}V_{Prop}}{RT_{0}}(\frac{\gamma }{1-P_{Pres}/P_{0}})$$
-                    In addition to sizing the tank, I drew a P&ID for the entire system.
+                    Continuing the theme of musical projects, I also worked to make an automatic guitar tuner. The theory of operation was to take the output signal from an electric 
+                    guitar, amplify it and feed it to a PIC microcontroller. The microcontroller would then process the signal, determine the frequency of the signal, and which string 
+                    the output was coming from. It would then drive a servo to either tighten or loosen the string, to match the proper note. The board was designed using KiCAD, and 
+                    the code for the PIC was written in C in MPLAB.
                 </p>
             </div>
             <div>
-                <img class="proj-img" src="../images/proj-imgs/pid.png">
+                <img class="proj-img" src="../images/proj-imgs/guitartuner.jpg">
             </div>
         </div>
         <hr>
         <div class="row proj-content">
             <div>
-                <a href="https://www.nature.com/articles/nphoton.2008.161"><img class="proj-img" src="../images/proj-imgs/laserignition.jpg" ></a>
+                <img class="proj-img" src="../images/proj-imgs/musiccontrol.jpg" >
             </div>
             <div class="right-text">
-                <h3 class="proj-header">Ignition Research</h3>
+                <h3 class="proj-header">Music Controller</h3>
                 <p> 
-                    An interesting problem we had to tackle with this novel fuel was how to effectively ignite it. Part of my role at Columbiad was to research the viability of
-                    different ignition methods. Some of the methods I explored were using traditional spark plugs, using plasma spark plugs, and using a laser. I found research 
-                    that supported the energy produced by commercially available lasers would be sufficient to ignite the nano-thermites. This conclusion was validated when we 
-                    conducted similar experiments with our fuel. With that research as a starting point, I started to design a way to integrate a laser into the system to allow it 
-                    to work with our combustion chamber.
+                    Due to the age of my car, it does not have Bluetooth, or any music control. This means that when my phone is plugged into the aux, I have no control over what 
+                    is playing and am unable to pause it. To solve this problem, I created a board I could mount above my radio which had pause, play and fast-forward buttons. It 
+                    operates the same way as headphones that have the same control, as outlined in the <a href="https://source.android.com/docs/core/interaction/accessories/headset/plug-headset-spec">android headphone specification.</a>
+                    I 3D printed the mount which slots into the unused CD drive.
                 </p>
             </div>
         </div>
         <hr>   
+        <div class="row ">
+            <h3 class="gallery">Gallery</h3> <!--TODO: The formatting on this one needs to be different--> 
+            <p>
+                In addition to my other projects, I have done a decent amount of 3D printing. These are small projects to solve simple annoyances, and experiment with my printer,
+                SolidWorks, and OnShape.
+            </p>
+            <div class="proj-content enlarge">
+                <img id="fydp1" class="gallery-img" src="../images/proj-imgs/phonestand.png">
+                <img id="fydp2" class="gallery-img" src="../images/proj-imgs/watchcharger.jpg"> <!--TODO: Add the captions-->
+                <img id= "fydp3" class="gallery-img" src="../images/proj-imgs/cupcake.jpg">
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">X</span>
+            
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+            </div>
+        </div>
     </div>
 
         <div class="container">
